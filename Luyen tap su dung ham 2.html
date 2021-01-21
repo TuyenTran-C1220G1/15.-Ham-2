@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function getSquare(a) {
+        return a * a;
+    }
+
+    //alert(getSquare(-3));
+
+    function getAreaCircle(r) {
+        if (r >= 0) {
+            return r * r * 3.14;
+        } else return "not circle"
+    }
+
+    // alert(getAreaCircle(6));
+
+    function getPerimeterCircle(r) {
+        if (r >= 0) {
+            return 2 * r * 3.14;
+        } else return "not circle"
+    }
+
+    // alert(getPerimeterCircle(-1));
+
+
+    function getFactorial(n) {
+        let product = 1;
+        for (i = 1; i <= n; i++) {
+            product *= i;
+        }
+        return product;
+    }
+
+    //alert(getFactorial(4));
+    let a = "";
+
+    function isNumber(n) {
+        return !isNaN(parseFloat(n)) //&& !isNaN(n - 0);
+    }
+
+    //alert(isNumber(a));
+
+    function min(a, b, c) {
+        return min = (a < b && a < c) ? a : (b < c) ? b : c;
+    }
+
+    //alert(min(0, 2, 6));
+
+    function isPositiveNumber(n) {
+        return isPositive = (n > 0) ? true : false;
+    }
+
+    //alert(isPositiveNumber(a));
+
+    function swap(a, b) {
+        return arr = [b, a]
+    }
+
+    // alert(swap(1,2));
+
+    function reverseArr(arr) {
+        return arr.reverse();
+    }
+
+    //alert(reverseArr(["a", "b", "c"]))
+
+    function findInArr(arr, str) {
+        let count = 0;
+        for (i = 0; i < arr.length; i++) {
+            if (str == arr[i]) {
+                count++;
+            }
+        }
+        return b = (count > 0) ? count : -1;
+    }
+    alert(findInArr(["a", "a", "c"], "a"))
+
+</script>

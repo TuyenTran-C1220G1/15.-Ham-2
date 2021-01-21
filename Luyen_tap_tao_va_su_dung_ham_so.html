@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button value="5" onclick="alert(addOne(5))">ok</button>
+</body>
+</html>
+<script>
+    function alertMessage() {
+        alert("xin chào")
+    }
+
+    function addOne(number) {
+        return number + 1;
+    }
+
+    function sumIf(a, b) {
+        let result;
+        if (a > b) {
+            result = " Your input a, b is wrong"
+        } else {
+            result = a + b;
+        }
+        return result;
+    }
+
+    // let a=sumIf(5,5);
+    // alert(a);
+
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        let result = firstNum + secondNum;
+        return result;
+    }
+
+    let arrName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arrCons = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    function findConstellation(str){
+        let result=(arrName.indexOf(str)==-1)? "not found": arrCons[arrName.indexOf(str)];
+        return result;
+    }
+    let name=prompt("Enter name:");
+    document.write(findConstellation(name));
+</script>

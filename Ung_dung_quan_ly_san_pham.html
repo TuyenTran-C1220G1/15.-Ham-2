@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+</style>
+<body>
+<center>
+    <label> Add New Product</label><br>
+    <input placeholder="New Product" id="inputProduct">
+    <button type="button" id="btnAdd" onclick="addProduct()">Add</button>
+    <br>
+    <label>Display All Product</label><br>
+    <label>Product name</label><br>
+    <table id="result" border="1"></table>
+</center>
+</body>
+</html>
+<script>
+    let products = [];
+    let x = 0;
+
+    function addProduct() {
+        products[x] = document.getElementById('inputProduct').value;
+        x++;
+        document.getElementById('inputProduct').value = '';
+        display()
+    }
+
+    function display() {
+        let e = "";
+        for (i = 0; i < products.length; i++) {
+            e += "<tr><td ><input id='p" + i + "' value='" + products[i] + "'></td>" + "<td><button onclick='editProducts(" + i + ")'>Edit</button></td>" + "<td><button onclick='deleteProducts(" + i + ")'>Delete</button></td>" + "</tr>";
+        }
+        document.getElementById('result').innerHTML = e
+        console.log(products)
+    }
+
+    function deleteProducts(index) {
+        products.splice(index, 1)
+        alert(index);
+        display()
+    }
+
+    function editProducts(index) {
+        products[index] = document.getElementById('p' + index).value
+        display()
+    }
+
+</script>
